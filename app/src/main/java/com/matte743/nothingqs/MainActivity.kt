@@ -127,7 +127,9 @@ class MainActivity : Activity() {
                 toggle.visibility = if (s == ShizukuShell.Status.READY) View.VISIBLE else View.GONE
                 toggle.isChecked = Prefs.useShizuku(this)
                 when (s) {
-                    ShizukuShell.Status.READY -> c.button.visibility = View.GONE
+                    ShizukuShell.Status.READY -> {
+                        c.button.visibility = View.GONE
+                    }
                     ShizukuShell.Status.NO_PERMISSION -> {
                         c.button.visibility = View.VISIBLE
                         c.setDone(false)
