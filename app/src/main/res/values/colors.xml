@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nothing-inspired palette, light theme -->
+    <color name="nt_red">#D71921</color>
+    <color name="widget_bg">#F2F2F2</color>
+    <color name="widget_surface">#E1E1E1</color>
+    <color name="widget_text">#000000</color>
+    <color name="widget_text_secondary">#6B6B6B</color>
+    <color name="tile_on_bg">#000000</color>
+    <color name="tile_on_icon">#FFFFFF</color>
+    <color name="tile_off_icon">#000000</color>
+    <color name="dot_on">#000000</color>
+    <color name="dot_off">#C6C6C6</color>
+
+    <color name="app_bg">#F2F2F2</color>
+    <color name="app_card">#FFFFFF</color>
+    <color name="app_text">#000000</color>
+    <color name="app_text_secondary">#6B6B6B</color>
+    <color name="app_button_bg">#000000</color>
+    <color name="app_button_text">#FFFFFF</color>
+    <color name="app_done_bg">#E1E1E1</color>
+</resources>

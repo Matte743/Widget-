@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:clipToOutline="true"
+    android:orientation="vertical"
+    android:paddingStart="14dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/bri_icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/tile_off_bg"
+            android:contentDescription="@string/cd_brightness"
+            android:padding="9dp"
+            android:src="@drawable/ic_brightness" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/bri_seg_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_1"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_2"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_3"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_4"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_5"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_6"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_7"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_8"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_9"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/bri_seg_10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/bri_dot_10"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bri_value"
+            android:layout_width="40dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="6dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitEnd"
+            android:tint="@color/widget_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/vol_icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/tile_off_bg"
+            android:contentDescription="@string/cd_volume"
+            android:padding="9dp"
+            android:src="@drawable/ic_volume" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/vol_seg_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_1"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_2"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_3"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_4"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_5"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_6"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_7"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_8"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_9"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/vol_seg_10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/vol_dot_10"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dot_off" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/vol_value"
+            android:layout_width="40dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="6dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitEnd"
+            android:tint="@color/widget_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tile_wifi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tile_wifi_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/tile_off_bg"
+                android:contentDescription="@string/label_wifi"
+                android:padding="11dp"
+                android:src="@drawable/ic_wifi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.06"
+                android:maxLines="1"
+                android:text="@string/label_wifi"
+                android:textColor="@color/widget_text_secondary"
+                android:textSize="8.5sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tile_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tile_data_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/tile_off_bg"
+                android:contentDescription="@string/label_data"
+                android:padding="11dp"
+                android:src="@drawable/ic_data" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.06"
+                android:maxLines="1"
+                android:text="@string/label_data"
+                android:textColor="@color/widget_text_secondary"
+                android:textSize="8.5sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tile_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tile_bt_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/tile_off_bg"
+                android:contentDescription="@string/label_bt"
+                android:padding="11dp"
+                android:src="@drawable/ic_bluetooth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.06"
+                android:maxLines="1"
+                android:text="@string/label_bt"
+                android:textColor="@color/widget_text_secondary"
+                android:textSize="8.5sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tile_hotspot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tile_hotspot_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/tile_off_bg"
+                android:contentDescription="@string/label_hotspot"
+                android:padding="11dp"
+                android:src="@drawable/ic_hotspot" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.06"
+                android:maxLines="1"
+                android:text="@string/label_hotspot"
+                android:textColor="@color/widget_text_secondary"
+                android:textSize="8.5sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tile_torch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tile_torch_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/tile_off_bg"
+                android:contentDescription="@string/label_torch"
+                android:padding="11dp"
+                android:src="@drawable/ic_torch" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.06"
+                android:maxLines="1"
+                android:text="@string/label_torch"
+                android:textColor="@color/widget_text_secondary"
+                android:textSize="8.5sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tile_glyph"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tile_glyph_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/tile_off_bg"
+                android:contentDescription="@string/label_glyph"
+                android:padding="11dp"
+                android:src="@drawable/ic_glyph" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.06"
+                android:maxLines="1"
+                android:text="@string/label_glyph"
+                android:textColor="@color/widget_text_secondary"
+                android:textSize="8.5sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

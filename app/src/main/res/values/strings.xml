@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QS Widget</string>
+    <string name="widget_name">Impostazioni rapide</string>
+    <string name="widget_description">Luminosità, volume, Wi-Fi, dati, Bluetooth, hotspot, torcia e torcia Glyph</string>
+
+    <string name="label_wifi">WI-FI</string>
+    <string name="label_data">DATI</string>
+    <string name="label_bt">BT</string>
+    <string name="label_hotspot">HOTSPOT</string>
+    <string name="label_torch">TORCIA</string>
+    <string name="label_glyph">GLYPH</string>
+    <string name="cd_brightness">Luminosità</string>
+    <string name="cd_volume">Volume</string>
+
+    <string name="subtitle">Widget impostazioni rapide in stile Nothing</string>
+    <string name="section_widget">Widget</string>
+    <string name="widget_add_desc">Aggiungi il widget alla schermata Home, oppure tieni premuto su uno spazio vuoto della Home, tocca Widget e cerca “QS Widget”.</string>
+    <string name="widget_add_button">Aggiungi alla Home</string>
+    <string name="widget_pin_unsupported">Il launcher non supporta l’aggiunta automatica: aggiungilo dal menu Widget della Home.</string>
+
+    <string name="section_brightness">Luminosità</string>
+    <string name="brightness_desc">Serve il permesso “Modifica impostazioni di sistema” per regolare la luminosità dal widget.</string>
+    <string name="section_bluetooth">Bluetooth</string>
+    <string name="bluetooth_desc">Serve il permesso “Dispositivi nelle vicinanze” per chiedere l’accensione del Bluetooth.</string>
+    <string name="section_notifications">Notifiche</string>
+    <string name="notifications_desc">Mostra la notifica con il tasto “Spegni” quando la torcia Glyph è accesa.</string>
+    <string name="section_glyph">Torcia Glyph</string>
+    <string name="glyph_supported">Glyph Matrix rilevata. Il widget accende tutti i LED della matrice sul retro.</string>
+    <string name="glyph_unsupported">Glyph Matrix non rilevata: la torcia Glyph funziona solo su Phone (3) e Phone (4a) Pro.</string>
+    <string name="glyph_test">Prova</string>
+    <string name="section_shizuku">Shizuku (facoltativo)</string>
+    <string name="shizuku_desc">Android non permette alle app di accendere e spegnere direttamente Wi-Fi, dati e Bluetooth. Senza Shizuku il widget apre il pannello di sistema. Con Shizuku li commuta con un tocco.</string>
+    <string name="shizuku_not_installed">Shizuku non è installato.</string>
+    <string name="shizuku_not_running">Shizuku è installato ma non è avviato.</string>
+    <string name="shizuku_needs_permission">Shizuku è attivo. Concedi l’autorizzazione a QS Widget.</string>
+    <string name="shizuku_ready">Shizuku è attivo e autorizzato.</string>
+    <string name="shizuku_use">Usa Shizuku per Wi-Fi, dati e Bluetooth</string>
+    <string name="section_haptics">Feedback aptico</string>
+    <string name="haptics_desc">Vibrazione breve e secca a ogni tocco sul widget.</string>
+
+    <string name="grant">Concedi</string>
+    <string name="granted">Attivo</string>
+    <string name="open">Apri</string>
+
+    <string name="glyph_channel">Torcia Glyph</string>
+    <string name="glyph_notification_title">Torcia Glyph accesa</string>
+    <string name="glyph_notification_text">Tocca Spegni oppure il pulsante Glyph del widget.</string>
+    <string name="glyph_turn_off">Spegni</string>
+    <string name="glyph_failed">Impossibile controllare la Glyph Matrix su questo telefono.</string>
+    <string name="bt_permission_needed">Concedi il permesso Bluetooth nell’app QS Widget.</string>
+</resources>
