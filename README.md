@@ -5,12 +5,16 @@ icone e numeri a matrice di punti, nero/bianco con il rosso Nothing, tema chiaro
 
 | Controllo | Cosa fa un tocco |
 |---|---|
-| **Luminosità** | Tocca uno dei 10 punti per scegliere il livello. Tocca l'icona del sole per attivare o disattivare la luminosità adattiva. |
-| **Volume** | Tocca uno dei 10 punti per il volume multimediale. Tocca l'icona dell'altoparlante per silenziare. |
+| **Luminosità** | Tocca la barra: il livello toccato si applica subito e sopra il widget si apre un pannello dove trascinare il dito. Tocca l'icona del sole per la luminosità adattiva. |
+| **Volume** | Come la luminosità: tocca la barra e trascina il dito nel pannello. Tocca l'icona dell'altoparlante per silenziare. |
 | **Wi-Fi, Dati, Bluetooth** | Con Shizuku si accendono e spengono direttamente. Senza Shizuku si apre il pannello di sistema. |
 | **Hotspot** | Apre la pagina dell'hotspot nelle Impostazioni. |
 | **Torcia** | Accende e spegne il flash posteriore. |
 | **Glyph** | Accende tutti i LED della Glyph Matrix sul retro come torcia. Si spegne dal widget o dalla notifica. |
+
+I widget di Android ricevono solo tocchi e non possono seguire il dito che scorre.
+Per questo le barre aprono un pannello a comparsa con due slider a punti: trascini, e ogni punto superato dà un piccolo tick.
+Il pannello si chiude toccando fuori o dopo 5 secondi senza tocchi.
 
 Ogni tocco dà un feedback aptico breve: doppio impulso quando accendi, impulso leggero quando spegni, tick sulle barre.
 Il feedback si può disattivare dall'app.

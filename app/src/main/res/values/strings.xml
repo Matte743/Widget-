@@ -48,5 +48,6 @@
     <string name="glyph_notification_text">Tocca Spegni oppure il pulsante Glyph del widget.</string>
     <string name="glyph_turn_off">Spegni</string>
     <string name="glyph_failed">Impossibile controllare la Glyph Matrix su questo telefono.</string>
+    <string name="slider_grant_brightness">Tocca qui per consentire a QS Widget di modificare la luminosità</string>
     <string name="bt_permission_needed">Concedi il permesso Bluetooth nell’app QS Widget.</string>
 </resources>

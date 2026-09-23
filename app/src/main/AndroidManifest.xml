@@ -55,6 +55,15 @@
             android:taskAffinity=""
             android:theme="@android:style/Theme.NoDisplay" />
 
+        <!-- Floating panel with draggable brightness and volume sliders. -->
+        <activity
+            android:name=".SliderActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/Theme.NothingQs.Slider" />
+
         <receiver
             android:name=".QsWidgetProvider"
             android:exported="true"

@@ -124,14 +124,34 @@ object SystemControls {
     }
 
     fun setVolumeSegment(context: Context, segment: Int) {
+        setVolumeFraction(context, segment.toFloat() / SEGMENTS, minimumOne = true)
+    }
+
+    /** Current media volume as a fraction 0..1 (0 when muted). */
+    fun volumeFraction(context: Context): Float {
+        val audio = context.getSystemService(AudioManager::class.java)
+        if (audio.isStreamMute(AudioManager.STREAM_MUSIC)) return 0f
+        val max = audio.getStreamMaxVolume(AudioManager.STREAM_MUSIC).coerceAtLeast(1)
+        return audio.getStreamVolume(AudioManager.STREAM_MUSIC).toFloat() / max
+    }
+
+    /** Sets the media volume from a fraction 0..1. Returns the step that was applied. */
+    fun setVolumeFraction(context: Context, fraction: Float, minimumOne: Boolean = false): Int {
         val audio = context.getSystemService(AudioManager::class.java)
         val max = audio.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
-        val target = ((segment.toFloat() / SEGMENTS) * max).roundToInt().coerceIn(1, max)
-        if (audio.isStreamMute(AudioManager.STREAM_MUSIC)) {
+        val low = if (minimumOne) 1 else 0
+        val target = (fraction.coerceIn(0f, 1f) * max).roundToInt().coerceIn(low, max)
+        if (target > 0 && audio.isStreamMute(AudioManager.STREAM_MUSIC)) {
             audio.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_UNMUTE, 0)
         }
-        audio.setStreamVolume(AudioManager.STREAM_MUSIC, target, 0)
+        if (audio.getStreamVolume(AudioManager.STREAM_MUSIC) != target) {
+            audio.setStreamVolume(AudioManager.STREAM_MUSIC, target, 0)
+        }
+        return target
     }
+
+    fun volumeMax(context: Context): Int =
+        context.getSystemService(AudioManager::class.java).getStreamMaxVolume(AudioManager.STREAM_MUSIC).coerceAtLeast(1)
 
     fun toggleMute(context: Context) {
         val audio = context.getSystemService(AudioManager::class.java)
@@ -178,14 +198,20 @@ object Brightness {
         (state.brightness * SystemControls.SEGMENTS).roundToInt().coerceIn(1, SystemControls.SEGMENTS)
 
     /** Sets a perceived level for [segment] (1..10). Turns adaptive brightness off. */
-    fun setSegment(context: Context, segment: Int): Boolean {
+    fun setSegment(context: Context, segment: Int): Boolean =
+        setLevel(context, segment.toFloat() / SystemControls.SEGMENTS)
+
+    /** Sets a perceived level 0..1, like the system slider. Turns adaptive brightness off. */
+    fun setLevel(context: Context, gamma: Float): Boolean {
         if (!Settings.System.canWrite(context)) return false
-        val gamma = segment.toFloat() / SystemControls.SEGMENTS
         val raw = (MIN + gammaToLinear(gamma) * (MAX - MIN)).roundToInt().coerceIn(MIN, MAX)
         val resolver = context.contentResolver
-        Settings.System.putInt(
-            resolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
-        )
+        if (isAuto(context)) {
+            Settings.System.putInt(
+                resolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
+            )
+        }
+        if (Settings.System.getInt(resolver, Settings.System.SCREEN_BRIGHTNESS, -1) == raw) return true
         return Settings.System.putInt(resolver, Settings.System.SCREEN_BRIGHTNESS, raw)
     }
 

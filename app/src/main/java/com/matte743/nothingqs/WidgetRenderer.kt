@@ -55,11 +55,13 @@ object WidgetRenderer {
         // ---- Brightness bar
         val briLit = Brightness.segments(state)
         bindBar(views, briDots, briLit)
+        // Tapping a dot sets that level and opens the draggable slider panel.
         for (i in briSegments.indices) {
-            val pi = if (state.canWriteSettings) Actions.broadcast(context, Actions.BRIGHTNESS_SET, i + 1)
-            else Actions.activity(context, Actions.OPEN_APP)
-            views.setOnClickPendingIntent(briSegments[i], pi)
+            views.setOnClickPendingIntent(
+                briSegments[i], Actions.slider(context, SliderActivity.TARGET_BRIGHTNESS, i + 1)
+            )
         }
+        views.setOnClickPendingIntent(R.id.bri_value, Actions.slider(context, SliderActivity.TARGET_BRIGHTNESS))
         views.setImageViewResource(
             R.id.bri_icon, if (state.autoBrightness) R.drawable.ic_brightness_auto_on else R.drawable.ic_brightness
         )
@@ -79,8 +81,11 @@ object WidgetRenderer {
         val volLit = SystemControls.volumeSegments(state)
         bindBar(views, volDots, volLit)
         for (i in volSegments.indices) {
-            views.setOnClickPendingIntent(volSegments[i], Actions.broadcast(context, Actions.VOLUME_SET, i + 1))
+            views.setOnClickPendingIntent(
+                volSegments[i], Actions.slider(context, SliderActivity.TARGET_VOLUME, i + 1)
+            )
         }
+        views.setOnClickPendingIntent(R.id.vol_value, Actions.slider(context, SliderActivity.TARGET_VOLUME))
         views.setImageViewResource(R.id.vol_icon, if (state.muted) R.drawable.ic_volume_off else R.drawable.ic_volume)
         views.setOnClickPendingIntent(R.id.vol_icon, Actions.broadcast(context, Actions.VOLUME_MUTE))
         val volPercent = if (state.muted) 0 else (state.volume * 100f / state.volumeMax).toInt()

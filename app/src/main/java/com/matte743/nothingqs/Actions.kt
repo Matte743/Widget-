@@ -39,7 +39,22 @@ object Actions {
         PendingIntent.getBroadcast(
             context,
             requestCode(action, level),
-            baseIntent(context, ActionReceiver::class.java, action, level),
+            baseIntent(context, ActionReceiver::class.java, action, level)
+                // Foreground priority: widget taps must feel instant.
+                .addFlags(Intent.FLAG_RECEIVER_FOREGROUND),
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
+
+    /** Opens the draggable slider panel; [level] > 0 also applies that level at once. */
+    fun slider(context: Context, target: Int, level: Int = 0): PendingIntent =
+        PendingIntent.getActivity(
+            context,
+            requestCode("SLIDER$target", level),
+            Intent(context, SliderActivity::class.java)
+                .putExtra(SliderActivity.EXTRA_TARGET, target)
+                .putExtra(EXTRA_LEVEL, level)
+                .setData(Uri.parse("qs://slider/$target/$level"))
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS),
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
         )
 
