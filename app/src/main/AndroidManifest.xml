@@ -89,6 +89,29 @@
                 android:value="Keeps the Glyph Matrix lit as a torch while the user wants it on" />
         </service>
 
+        <!-- Glyph Toy: stacked clock on the Glyph Matrix, also usable as Always-on Glyph Toy.
+             Own process, because the Glyph torch uses the same per-process SDK manager. -->
+        <service
+            android:name=".GlyphClockToy"
+            android:exported="true"
+            android:process=":glyphclock">
+            <intent-filter>
+                <action android:name="com.nothing.glyph.TOY" />
+            </intent-filter>
+            <meta-data
+                android:name="com.nothing.glyph.toy.name"
+                android:resource="@string/clock_toy_name" />
+            <meta-data
+                android:name="com.nothing.glyph.toy.image"
+                android:resource="@drawable/glyph_clock_preview" />
+            <meta-data
+                android:name="com.nothing.glyph.toy.summary"
+                android:resource="@string/clock_toy_summary" />
+            <meta-data
+                android:name="com.nothing.glyph.toy.aod_support"
+                android:value="1" />
+        </service>
+
         <service
             android:name=".StateSyncJob"
             android:exported="false"

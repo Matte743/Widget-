@@ -103,6 +103,17 @@ class MainActivity : Activity() {
             }
         }
 
+        // ---- Glyph clock toy
+        card(getString(R.string.section_clock), "").also { c ->
+            c.button.text = getString(R.string.clock_open_toys)
+            c.button.setOnClickListener { openGlyphToysManager() }
+            refreshers += {
+                val supported = GlyphTorchService.isSupported()
+                c.desc.text = getString(if (supported) R.string.clock_supported else R.string.clock_unsupported)
+                c.button.visibility = if (supported) View.VISIBLE else View.GONE
+            }
+        }
+
         // ---- Shizuku
         card(getString(R.string.section_shizuku), getString(R.string.shizuku_desc)).also { c ->
             val status = text("", 14f, R.color.app_text).apply { setPadding(0, dp(10f), 0, 0) }
@@ -220,6 +231,19 @@ class MainActivity : Activity() {
                 Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=${ShizukuShell.PACKAGE}"))
             )
         }
+    }
+
+    /** Nothing's "Manage Glyph Toys" screen, where the user adds the clock to the toy list. */
+    private fun openGlyphToysManager() {
+        val intent = Intent().setComponent(
+            ComponentName("com.nothing.thirdparty", "com.nothing.thirdparty.matrix.toys.manager.ToysManagerActivity")
+        )
+        val opened = try {
+            startSafely(intent)
+        } catch (_: SecurityException) {
+            false
+        }
+        if (!opened) Toast.makeText(this, R.string.clock_toys_manager_missing, Toast.LENGTH_LONG).show()
     }
 
     private fun startSafely(intent: Intent): Boolean = try {
