@@ -58,6 +58,24 @@ Funziona su Phone (3) e Phone (4a) Pro.
 Mentre è accesa resta una notifica, perché la matrice rimane illuminata solo finché l'app è attiva.
 Se usi un Glyph Toy con il pulsante Glyph, il Toy ha la precedenza sulla torcia.
 
+## Orologio Glyph
+
+L'app installa anche un Glyph Toy chiamato **Orologio**: mostra l'ora sulla Glyph Matrix con le ore sopra e i minuti sotto, come l'orologio del Phone (4a) Pro.
+
+![Orologio Glyph su Phone (4a) Pro e Phone (3)](docs/glyph-clock.png)
+
+La matrice del (4a) Pro ha 13×13 LED e usa cifre di 4×5 punti con tratti di un LED.
+Quella del Phone (3) ha 25×25 LED, quindi lo stesso disegno è ridisegnato a 7×10 punti con tratti di due LED e angoli arrotondati.
+Le quattro cifre occupano un blocco di 15×21 LED, centrato nel cerchio senza toccare i bordi.
+L'orologio segue l'impostazione 12 o 24 ore del telefono.
+
+Per attivarlo:
+
+1. Apri QS Widget e tocca **Gestisci Glyph Toys** nella scheda “Orologio Glyph”. In alternativa vai in Impostazioni › Glyph Interface › Glyph Toys.
+2. Aggiungi **Orologio** all'elenco dei Toy attivi.
+3. Premi il pulsante Glyph sul retro finché compare l'orologio.
+4. Per vederlo sempre, sceglilo come **Glyph Toy sempre attivo** nelle impostazioni della Glyph Interface. In quel caso il sistema lo aggiorna ogni minuto.
+
 ## Compilare da sorgente
 
 Ogni push su GitHub compila l'APK con GitHub Actions e aggiorna la release `apk-latest`.

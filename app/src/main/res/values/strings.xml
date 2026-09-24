@@ -29,6 +29,13 @@
     <string name="glyph_supported">Glyph Matrix rilevata. Il widget accende tutti i LED della matrice sul retro.</string>
     <string name="glyph_unsupported">Glyph Matrix non rilevata: la torcia Glyph funziona solo su Phone (3) e Phone (4a) Pro.</string>
     <string name="glyph_test">Prova</string>
+    <string name="section_clock">Orologio Glyph</string>
+    <string name="clock_supported">Un Glyph Toy che mostra l’ora sulla Glyph Matrix: ore sopra, minuti sotto. Aggiungilo ai Glyph Toys, poi sceglilo con il pulsante Glyph o come Glyph Toy sempre attivo.</string>
+    <string name="clock_unsupported">Glyph Matrix non rilevata: l’orologio Glyph funziona solo su Phone (3) e Phone (4a) Pro.</string>
+    <string name="clock_open_toys">Gestisci Glyph Toys</string>
+    <string name="clock_toys_manager_missing">Apri Impostazioni › Glyph Interface › Glyph Toys e aggiungi “Orologio”.</string>
+    <string name="clock_toy_name">Orologio</string>
+    <string name="clock_toy_summary">Ore sopra e minuti sotto, a tutta matrice</string>
     <string name="section_shizuku">Shizuku (facoltativo)</string>
     <string name="shizuku_desc">Android non permette alle app di accendere e spegnere direttamente Wi-Fi, dati e Bluetooth. Senza Shizuku il widget apre il pannello di sistema. Con Shizuku li commuta con un tocco.</string>
     <string name="shizuku_not_installed">Shizuku non è installato.</string>
